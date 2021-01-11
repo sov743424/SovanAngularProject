@@ -1,0 +1,100 @@
+<section>
+    <div class="video-container">
+        <video src="../../assets/v3.mp4" autoplay muted loop></video>
+    </div>
+<div class="img">
+<section class="ftco-section" >
+    <div class="container">
+        <div class="row justify-content-center">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <div class="wrapper">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="col-lg-6 d-flex align-items-stretch">
+                            <div class="info-wrap w-100 p-5">
+                                <h3 class="mb-4 con">Contact us</h3>
+                        <div class="dbox w-100 d-flex align-items-start">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-map-marker"></span>
+                            </div>
+                            <div class="text pl-4">
+                            <p style="color:#0062cc;"><span class="in">Address:</span> Barasat,West Bengal 743424</p>
+                          </div>
+                      </div>
+                        <div class="dbox w-100 d-flex align-items-start">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <div class="text pl-4">
+                            <p><span class="in">Phone:</span> <a href="tel://7908179009">+91 7908179009</a></p>
+                          </div>
+                      </div>
+                        <div class="dbox w-100 d-flex align-items-start">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-paper-plane"></span>
+                            </div>
+                            <div class="text pl-4">
+                            <p><span class="in">Email:</span> <a href="">info@yoursite.com</a></p>
+                          </div>
+                      </div>
+                        <div class="dbox w-100 d-flex align-items-start">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-globe"></span>
+                            </div>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="contact-wrap w-100 p-md-5 p-4 ig">
+                                <h3 class="mb-4" style="color: deeppink;">Get in touch</h3>
+                                <div id="form-message-warning" class="mb-4"></div> 
+                                <form [formGroup]='conform' (ngSubmit)="condata()" id="contactForm" name="contactForm">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="name" id="name" placeholder="Name">
+                                                <div *ngIf="conform.get('name').hasError('required') && conform.get('name').touched">Name Is Required</div>
+                                                <div *ngIf="conform.controls['name'].errors?.minlength">Minimum 4 Character</div>
+                                        
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12"> 
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" formControlName="email" id="email" placeholder="Email">
+                                                <div *ngIf="conform.get('email').hasError('required') && conform.get('email').touched">Email Is Required</div>
+                                                <div *ngIf="conform.get('email').hasError('pattern') && conform.get('email').touched">Invalid Email</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" formControlName="subject" id="subject" placeholder="Subject">
+                                                <div *ngIf="conform.get('subject').hasError('required') && conform.get('subject').touched">Subject Is Required</div>
+                                                <div *ngIf="conform.controls['subject'].errors?.minlength">Minimum 4 Character</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea formControlName="msg" class="form-control" id="message" cols="30" rows="5" placeholder="Message"></textarea>
+                                                <div *ngIf="conform.get('msg').hasError('required') && conform.get('msg').touched">Message Is Required</div>
+                                                <div *ngIf="conform.controls['msg'].errors?.minlength">Minimum 4 Character</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <button type="submit" [disabled]='conform.invalid' class="btn btn-success btn-block">Submit</button>
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</section>

@@ -1,0 +1,30 @@
+.ab{background-image: url(../../assets/pexels-pixabay-265087.jpg) ; background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;} 
+.abc{border: 1px solid #c59071; padding: 15px 18px; margin-top: 135px; backdrop-filter: blur(15px);
+    -webkit-box-shadow: -2px 1px 21px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 1px 21px 13px rgba(0,0,0,0.75);
+    box-shadow: -2px 1px 21px 13px rgba(0,0,0,0.75);
+}
+.ad{text-align: center;color: #fbff00;}
+.av{color:#00f3ff;}
+.af{color:#b11707;}
+::placeholder{text-align: center;color: black;}
+input.ng-invalid.ng-touched{border-color:crimson;}
+input.ng-valid .ng-touched{border-color: blue;}
+input.ng-dirty{border-color: burlywood;}
+input.ng-untouched{border-color:green;}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: no-repeat center center/cover;
+}
+

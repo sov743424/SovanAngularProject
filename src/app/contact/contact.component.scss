@@ -1,0 +1,27 @@
+
+.ig{
+    background-color: aliceblue;
+    border-radius: 14px;
+    border: 20px;
+}
+.con{
+    color: brown;
+    font-size:30px ;
+}
+.in{
+    font-size: 20px;
+    color:#ce1515;
+}
+input,textarea.ng-invalid.ng-touched{border-color:crimson;}
+input.ng-valid.ng-touched{border-color: blue;}
+input.ng-dirty{border-color: burlywood;}
+textarea,input.ng-untouched{border-color:green;}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: cover;
+}

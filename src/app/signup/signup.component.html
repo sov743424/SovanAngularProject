@@ -1,0 +1,48 @@
+<section>
+  <div class="video-container">
+      <video src="../../assets/v3.mp4" autoplay muted loop></video>
+  </div>
+<div class="container-fluid ab">
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+      
+<form [formGroup]='regform' (ngSubmit)="regdata()" class="abc">
+  <h2 style="text-align: center; color: #21fff5;">Sign Up</h2>
+	<div class="form-group">
+    <label style="color: aliceblue;">FirstName</label>
+    <input type="text" class="form-control" formControlName="firstname" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your FirstName">
+    <div *ngIf="regform.get('firstname').hasError('required') && regform.get('firstname').touched">FirstName Is Required</div>
+    <div *ngIf="regform.controls['firstname'].errors?.minlength">Minimum 4 Character</div>
+</div>
+
+<div class="form-group">
+    <label style="color: aliceblue;">LastName</label>
+    <input type="text" class="form-control" formControlName="lastname" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your LastName">
+    <div *ngIf="regform.get('lastname').hasError('required') && regform.get('lastname').touched">LastName Is Required</div>
+    <div *ngIf="regform.controls['lastname'].errors?.minlength">Minimum 4 Character</div>
+</div>
+
+
+  <div class="form-group">
+    <label style="color: aliceblue;">Email address</label>
+    <input type="text" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email">
+    <div *ngIf="regform.get('email').hasError('required') && regform.get('email').touched">Email Is Required</div>
+    <div *ngIf="regform.get('email').hasError('pattern') && regform.get('email').touched">Invalid Email</div>
+  </div>
+  
+  <div class="form-group">
+    <label style="color: aliceblue;">Password</label>
+    <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Enter Strong Password">
+    <div *ngIf="regform.get('password').hasError('required') && regform.get('password').touched">Password Is Required</div>
+    <div *ngIf="regform.get('password').hasError('pattern') && regform.get('password').touched">Invalid password</div>
+  </div>
+  
+  <button type="submit" [disabled]='regform.invalid' class="btn btn-success btn-block">Submit</button>
+
+  <li style="color: aliceblue;">Already Have Account?<a routerLink="../login">Log in</a></li>
+</form>
+</div>
+</div>
+</div>
+</section>
