@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
     let form=this.conform.value;
     this.service.users(form).subscribe(Response=>{
       this.user=Response;
-      alert(this.user.message)
+      alert('Feedback Has Been Sent')
       console.log(this.user)
     })
   }

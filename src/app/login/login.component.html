@@ -1,7 +1,4 @@
-<section>
-    <div class="video-container">
-        <video src="../../assets/v3.mp4" autoplay muted loop></video>
-    </div>
+<section class="ab">
 <div class="container-fluid ">
 	<div class="row">
         <div class="col-md-4 col-sm-4 col-xs-12"></div>
@@ -11,24 +8,30 @@
 <form [formGroup]='regform' (ngSubmit)="regdata()" class="abc">
 <h2 style="text-align: center; color: #21fff5;">Log In</h2>
   <div class="form-group">
-    <label style="color: aliceblue;">Email address</label>
-    <input type="text" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your email">
-    <div *ngIf="regform.get('email').hasError('required') && regform.get('email').touched">Email Is Required</div>
-    <div *ngIf="regform.get('email').hasError('pattern') && regform.get('email').touched">Invalid Email</div>
+    <label style="color: aliceblue;">Email address:</label>
+    <input type="text" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+    <div *ngIf="regform.get('email').hasError('required') && regform.get('email').touched" style="color: #e0dc59;">Email Is Required</div>
+    <div *ngIf="regform.get('email').hasError('pattern') && regform.get('email').touched" style="color: #e0dc59;">Invalid Email</div>
   </div>
   
   <div class="form-group">
-    <label style="color: aliceblue;">Password</label>
+    <label style="color: aliceblue;">Password:</label>
     <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Enter Strong Password">
-    <div *ngIf="regform.get('password').hasError('required') && regform.get('password').touched">Password Is Required</div>
-    <div *ngIf="regform.get('password').hasError('pattern') && regform.get('password').touched">Invalid password</div>
+    <div *ngIf="regform.get('password').hasError('required') && regform.get('password').touched" style="color: #e0dc59;">Password Is Required</div>
+    <div *ngIf="regform.get('password').hasError('pattern') && regform.get('password').touched" style="color: #e0dc59;">Invalid password</div>
   </div>
   
  
   <button type="submit" [disabled]='regform.invalid' class="btn btn-success btn-block">Submit</button>
+  <li style="color: white;">Don't Have Account?<a routerLink="../signup">Click Here</a></li>
 </form>
-<li style="color: white;">Don't Have Account?<a routerLink="../signup">Click Here</a></li>
+
 </div>
+</div><br><br><br><br>
 </div>
-</div>
+<footer class="text-center">
+  <div class="text-center p-3" >
+    <a  style="font-weight: 800; color: #00ffff">&copy;2021 All rights reserved | This Project is made by Sovan Karmakar</a>
+  </div>
+</footer>
 </section>

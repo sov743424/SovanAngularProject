@@ -41,7 +41,7 @@ ser=[{
   id:1,
   img:'../../assets/a1.png',
   work:'Angular',
-  des:'Angular is the platform that makes it easy to develop robust web applications'
+  des:'Angular is the platform that makes it easy to develop robust web applications  and mobile-first websites' 
 },
 {
   id:2,
@@ -65,7 +65,7 @@ id:4,
 id:5,
 img:'../../assets/a5.png',
 work:'Node JS',
-des:'Node. js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature'
+des:'Node. js is primarily used for non-blocking, event-driven servers'
 },
 {
 id:6,

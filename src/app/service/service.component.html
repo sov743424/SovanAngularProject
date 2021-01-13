@@ -45,10 +45,10 @@
         </div>
     </div>
     </section><br>
-
-  <div class="row row-cols-1 row-cols-md-3 g-4"  style="width: 100%;">
-    <div *ngFor="let b of ser" class="col ac" >
-      <div class="card">
+<div class="container">
+    <div class="row row-cols-3"  style="width: auto;">
+    <div *ngFor="let b of ser" class="col" ><br>
+      <div class="card ac" style="width: auto; height: auto">
         <img
           src="{{b.img}}"
           class="card-img-top "
@@ -65,11 +65,11 @@
       </div>
     </div>
     </div>
-
+  </div>
   <section id="about">
     <div class="container">
         <div class="text-intro">
-        <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: brown; font-weight: 300;" >Gallery</h1>
+        <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: brown; font-weight: 300;" >Photo Gallery</h1>
         </div>
     </div>
     </section>
@@ -79,7 +79,7 @@
         <div  class="row">
             <div *ngFor="let i of service" class="col-lg-3 col-md-4 col-xs-6 thumb"><br>
                 <a href="{{i.img}}" class="fancybox" rel="ligthbox">
-                    <img  src="{{i.img}}" class="zoom img-fluid "  alt="">
+                    <img  src="{{i.img}}" class="zoom img-fluid"  alt="">
                 </a>
         </div>
        </div>
@@ -87,6 +87,6 @@
   
        <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3" >
-          <a class="text-dark" style="font-weight: 800;">&copy;All rights reserved | This Project is made by Sovan Karmakar</a>
+          <a class="text-dark" style="font-weight: 800;">&copy;2021 All rights reserved | This Project is made by Sovan Karmakar</a>
         </div>
       </footer>

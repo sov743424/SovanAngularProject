@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder,Validators} from '@angular/forms'
 import { LoginService } from '../login.service'
 import { Router } from '@angular/router';
+import {StorageService} from '../storage.service'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   regform:FormGroup;
   loguser:any;
-  constructor(private fbuilder:FormBuilder,private service:LoginService,private route:Router) { }
+  constructor(private fbuilder:FormBuilder,private service:LoginService,private route:Router,private storage:StorageService) { }
 
   ngOnInit(): void {
     this.regform=this.fbuilder.group({
@@ -23,8 +24,16 @@ export class LoginComponent implements OnInit {
     this.service.loguser(form).subscribe(Response=>{
       this.loguser=Response;
       alert(this.loguser.message)
-    
+
+      this.storage.setData(this.loguser.email,this.loguser.full_name,this.loguser.token,this.loguser.user_id)
+
       this.route.navigate(['../dashboard'])
-    })
+    },
+
+    error=>{
+      console.log(error);
+      alert('Invalid Login')
+    }
+    )
   }
 }

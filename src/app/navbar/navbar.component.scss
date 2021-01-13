@@ -45,54 +45,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     padding-bottom: 0;
     background-color: #212529;
 }
-.banner{
-	background-image:url('../../assets/pexels-luis-gomes-546819.jpg');
-	text-align: center;
-    color: #fff;
-   
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.banner-text{
-	padding:200px 0 150px 0;
-}
-.banner-heading{
-	font-family: 'Lobster', cursive;
-	font-size: 75px;
-    font-weight: 700;
-    line-height: 100px;
-    margin-bottom: 30px;
-	color:rgba(15, 224, 214, 0.904);
-}
-.banner-sub-heading{
-	font-family: 'Libre Baskerville', serif;
-	font-size: 30px;
-    font-weight: 300;
-    line-height: 30px;
-    margin-bottom: 50px;
-	color:rgba(15, 224, 214, 0.904);
-}
 
-.btn-banner{
-	padding:5px 20px;
-	border-radius:10px;
-	font-weight:700;
-	line-height:1.5;
-	text-align:center;
-	color:#fff;
-	text-transform:uppercase;
-}
-.text-intro{
-	width:90%;
-	margin:auto;
-	text-align:center;
-	padding-top:30px;
-}
 
 
 /* mobile view */
